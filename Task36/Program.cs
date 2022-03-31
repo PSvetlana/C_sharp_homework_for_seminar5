@@ -31,12 +31,9 @@ int[] CreateRandomArray(int length) //создает массив из ранд�
 int SearchingSumOfElementsInArray(int[] arrayToSearch) //находит сумму элементов, стоящих на нечётных позициях
 {
     int sum = 0;
-    for (int i = 0; i < arrayToSearch.Length; i++)
+    for (int i = 1; i < arrayToSearch.Length; i += 2)
     {
-        if (i % 2 != 0)
-        {
-            sum += arrayToSearch[i];
-        }
+        sum += arrayToSearch[i];
     }
     return sum;
 }
